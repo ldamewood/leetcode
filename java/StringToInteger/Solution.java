@@ -17,7 +17,7 @@ public class Solution {
 		int result = 0;
 		int charVal;
 		for (int i = 0; i < str.length(); i++) {
-			charVal = (int) str.charAt(i) - 0x30;
+			charVal = str.charAt(i) - '0';//(int) str.charAt(i) - 0x30;
 			if (sign * result > (Integer.MAX_VALUE - charVal)/10)
 				return sign * Integer.MAX_VALUE;
 			if (sign * result < (Integer.MIN_VALUE + charVal)/10)
